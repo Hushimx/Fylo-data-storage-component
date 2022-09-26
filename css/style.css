@@ -13,6 +13,7 @@ body {
   align-items: center;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
   
 }
 .continer {
@@ -33,6 +34,8 @@ body {
   justify-content: space-evenly;
   border-radius: 20px;
   border-top-right-radius: 79px;
+  animation-name: first;
+  animation-duration: 3s;
 
 }
 .second {
@@ -46,6 +49,9 @@ body {
   background-color: #1e2c69;
   margin-bottom: -40px;
   border-radius: 20px;
+  animation-name: sec;
+  animation-duration: 3s;
+
 }
 .whitebox {
   display: flex;
@@ -128,13 +134,13 @@ a {
   align-items: center;
   position: absolute;
   height: 18px;
-  width: 0%;
+  width: 6%;
   background-image: linear-gradient(53deg, #ff9693 30%, #fc5391 100%); 
   border-radius: 20px;
   animation-name: pro;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation-delay: 3.5s;
 }
 .pro::after{
   position: absolute;
@@ -148,10 +154,33 @@ a {
 @keyframes pro {
 
   from {
-    width: 0%;
+    opacity: 0;
+    width: 6%;
   }
   to {
+    opacity: 1;
     width: 80%;
+  }
+  
+}
+@keyframes first {
+
+  0% {
+    transform: translate(-999px);
+  }
+  100% {
+    transform: translate(0);
+
+  }
+  
+}@keyframes sec {
+
+  0% {
+    transform: translate(999px);
+  }
+  100% {
+    transform: translate(0);
+
   }
   
 }
